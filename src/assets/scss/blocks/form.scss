@@ -1,0 +1,168 @@
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+
+.form__input {
+  padding: 9px 0 9px 10px;
+  margin-bottom: 13px;
+  border: 2px solid transparent;
+  width: 260px;
+  height: 36px;
+  outline: 0;
+
+  border-radius: 11px;
+  background: $white;
+
+
+  font-family: Myriad, 'sans-serif';
+  font-size: 15px;
+  font-weight: 400;
+
+  color: $holder;
+  transition: all .2s ease;
+
+  &:focus ~ .form__label,
+  &:not(:focus):valid ~ .form__label{
+    top: 12px;
+  }
+
+  &:valid,
+  &:focus {
+    height: auto;
+  }
+
+}
+
+.form__action{
+  margin-top: 89px;
+}
+
+.form__question {
+  margin-bottom: 40px;
+}
+
+.form__info {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.form__choice {
+  position: relative;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  &--quiz {
+    display: flex;
+  }
+}
+
+.form__wrap-choice {
+  margin: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  @include breakpoint ($mobile-bp) {
+    margin: 5px;
+  }
+
+}
+
+.form__action {
+  width: 100%;
+  margin: 10px;
+  text-align: center;
+}
+
+.form__input-interrogation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+
+  &:checked,
+  &:active ~ .form__label-interrogation {
+    color: $yellow;
+    border: 1px solid $yellow;
+    transform: scale(1.02);
+  }
+
+}
+
+.form__label-interrogation  {
+  width: 100%;
+  padding: 9px 16px;
+
+  text-align: center;
+
+  border-radius: 14px;
+  border: 1px solid $buttonInterrogation;
+  background: $white;
+
+  font-family: MYRIAD, 'sans-serif';
+  font-size: 17px;
+  font-weight: 400;
+
+  color: $black;
+
+  cursor: pointer;
+  transition: transform .2s ease-in, color .2s ease-in ;
+
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover,
+  &:active {
+    border: 1px solid $yellow;
+  }
+
+  @include breakpoint ($mobile-bp) {
+    padding: 9px 10px;
+
+    font-size: 14px;
+  }
+  
+}
+
+.form__form-input  {
+  padding: 9px 16px;
+
+  border-radius: 14px;
+  border: 1px solid $buttonInterrogation;
+  background: $white;
+
+  font-family: MYRIAD, 'sans-serif';
+  font-size: 17px;
+  font-weight: 400;
+
+  color: $black;
+  outline: none;
+  transition: transform .2s ease-in, color .2s ease-in ;
+
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border: 1px solid $yellow;
+  }
+
+  &--button {
+    cursor: pointer;
+  }
+
+  @include breakpoint ($mobile-bp) {
+    font-size: 14px;
+  }
+}
+
+.form__input--error {
+  border: 2px solid $red;
+  color: $red;
+}

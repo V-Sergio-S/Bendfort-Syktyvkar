@@ -1,0 +1,118 @@
+
+.wrap {
+  display: flex;
+  justify-content: center;
+
+}
+
+.wrap__holder {
+  position: relative;
+  max-width: 470px;
+
+  z-index: 1;
+
+  &--always-question {
+    max-width: 580px;
+  }
+
+  &--card {
+    max-width: 649px;
+  }
+
+  &--about {
+    max-width: 614px;
+  }
+
+  &--additional-education {
+    max-width: 580px;
+  }
+}
+
+.wrap__animation {
+  animation-name: slalom;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+
+  &--footer {
+    @include breakpoint ( $tapik-bp) {
+      display: none;
+    }
+  }
+}
+
+.wrap__title-icon {
+
+  &--benefits {
+    position: absolute;
+    top: calc(-35% - 43px);
+    left: calc(96% - 47px);
+    z-index: -1;
+
+    @include breakpoint ( $mobile-bp) {
+      top: calc(-55% - 43px);
+      left: calc(55% - 47px);
+    }
+  }
+
+  &--our-teachers {
+    position: absolute;
+    top: calc(100% + 7px);
+    left: calc(13% - 7px);
+  }
+
+  &--comments {
+    position: absolute;
+    top: calc(100% + 7px);
+    left: calc(45% - 111px);
+  }
+
+  &--always-question {
+    position: absolute;
+    top: calc(100% + 7px);
+    left: calc(45% - 111px);
+
+    @include breakpoint ( $tapik-bp) {
+      top: calc(100% + 7px);
+      left: calc(45% - 111px);
+    }
+  }
+
+  &--card {
+    position: absolute;
+    top: calc(100% + 7px);
+    left: calc(52% - 245px);
+
+    @include breakpoint ( $tapik-bp) {
+      width: 265px;
+      height: 13px;
+      top: calc(100% + 7px);
+      left: calc(43% - 132px);
+    }
+  }
+
+  &--about {
+    position: absolute;
+    top: calc(-35% - 43px);
+    left: calc(96% - 47px);
+    z-index: -1;
+
+    @include breakpoint ( $mobile-bp) {
+      top: calc(-55% - 43px);
+      left: calc(55% - 47px);
+    }
+  }
+
+  &--additional-education {
+    position: absolute;
+    top: calc(100% + 7px);
+    left: calc(52% - 245px);
+
+    @include breakpoint ( $tapik-bp) {
+      width: 265px;
+      height: 13px;
+      top: calc(100% + 7px);
+      left: calc(43% - 132px);
+    }
+  }
+
+}

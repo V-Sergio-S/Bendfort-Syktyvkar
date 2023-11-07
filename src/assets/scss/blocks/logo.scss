@@ -1,0 +1,16 @@
+.logo {
+  margin-right: 61px;
+
+  &--popup {
+    margin-right: 0;
+  }
+
+  @include breakpoint ($mobile-bp) {
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+
+  @include breakpoint ($tapik-bp) {
+    margin: 0;
+  }
+}

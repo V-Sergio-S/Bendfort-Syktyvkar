@@ -1,0 +1,84 @@
+
+.about {
+  padding: 63px 0 84px 0;
+  background: $about;
+
+  @include breakpoint ($mobile-bp) {
+    padding: 83px 0 140px 0;
+  }
+}
+
+.about__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include breakpoint ($laptop-bp) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+.about__item {
+  position: relative;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.about__item-decoration {
+  width: 100%;
+}
+
+.about__item-element {
+
+    position: absolute;
+    top: 22px;
+    left: 21px;
+    width: 260px;
+    height: 127px;
+
+    transform: rotate(-6deg);
+    border-radius: 6.606px;
+    background: #E4F6FF;
+    z-index: -1;
+}
+
+.about__item-element:first-child {
+
+  position: absolute;
+  top: 22px;
+  left: 21px;
+  width: 260px;
+  height: 127px;
+
+  transform: rotate(-9deg);
+  border-radius: 6.606px;
+  background: #F1FFE4;
+  z-index: -1;
+}
+
+.about__item-element:last-child {
+
+  position: absolute;
+  top: 22px;
+  left: 21px;
+  width: 260px;
+  height: 127px;
+
+  transform: rotate(-3deg);
+  border-radius: 6.606px;
+  background: #FFE5EA;
+  z-index: -1;
+}
+
+.about__card {
+  width: 261px;
+  margin: 21px;
+  padding: 23px 0 34px;
+
+  border-radius: 6.606px;
+  background-color: $white;
+  box-shadow: 0 13px 26px 0 rgba(0, 0, 0, 0.1);
+  z-index: 1;
+
+}

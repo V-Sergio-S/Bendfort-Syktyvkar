@@ -1,0 +1,36 @@
+
+.yep-images {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  z-index: -1;
+
+  @include breakpoint ( $mobile-bp) {
+    display: none;
+  }
+}
+
+.yep-images__images {
+  width: 100%;
+  height: 100%;
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  &--comments {
+    background-image: url('../images/yep-vertical.png');
+    @supports (background: url('../images/yep-vertical.webp')) {
+      background-image: url('../images/yep-vertical.webp');
+    }
+    background-position: right;
+  }
+
+  &--footer {
+    background-image: url('../images/yep-vertical-transform.png');
+    @supports (background: url('../images/yep-vertical-transform.webp')) {
+      background-image: url('../images/yep-vertical-transform.webp');
+    }
+    background-position: left;
+  }
+}

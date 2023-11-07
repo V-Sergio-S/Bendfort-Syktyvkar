@@ -1,0 +1,46 @@
+
+.document {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.document__list {
+  margin-top: 15px;
+
+  list-style: none;
+  display: flex;
+  align-items: start;
+
+  &:hover .document__link {
+    color: $yellow;
+  }
+}
+
+.document__link {
+  text-decoration: none;
+
+  font-family: MYRIAD, 'sans-serif';
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 167%; /* 28.39px */ 
+  color: $black;
+
+  transition: color .4s ease-in;
+
+  @include breakpoint ($mobile-bp) {
+    font-size: 14px;
+  }
+}
+
+.document__image {
+  width: 6px;
+  height: 6px;
+  display: flex;
+  margin: 11px 5px 0 0;
+
+  @include breakpoint ($mobile-bp) {
+    margin: 7px 5px 0 0;
+  }
+}

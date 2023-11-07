@@ -1,0 +1,75 @@
+
+.burger{
+  display: none;
+  width: 30px;
+  height: 30px;
+
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0;
+  color: transparent;
+
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+
+  cursor: pointer;
+
+  -webkit-tap-highlight-color: transparent;
+
+  &::before,
+  &::after,
+  span{
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: $yellow;
+    position: absolute;
+
+  }
+
+  &::before,
+  &::after{
+    content:"";
+    transition: transform .3s linear;
+  }
+
+  &::before{
+    top:0;
+  }
+  &::after{
+    bottom:0;
+  }
+  span{
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity .1s linear;
+  }
+
+
+  .show-sidebar & {
+    span{
+      opacity: 0;
+    }
+
+    &::before,
+    &::after{
+      top: 50%;
+    }
+
+    &::before{
+      transform: rotate(45deg);
+    }
+
+    &::after{
+      transform: rotate(-45deg);
+    }
+  }
+
+  @include breakpoint ($tablet-bp) {
+    display: block;
+  }
+
+}

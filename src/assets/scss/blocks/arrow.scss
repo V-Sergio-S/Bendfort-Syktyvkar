@@ -1,0 +1,40 @@
+
+.arrow {
+  display: flex;
+  width: 72px;
+  height: 72px;
+  justify-content: center;
+  align-items: center;
+
+  border: 0;
+  cursor: pointer;
+  border-radius: 100px;
+  background: var(--grey, $borderCard);
+  backdrop-filter: blur(6px);
+
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+
+  &:active {
+    background: $arrowBg;
+  }
+
+  @include breakpoint ($mobile-bp) {
+    width: 62px;
+    height: 62px;
+  }
+}
+
+.arrow__wrap {
+  width: 160px;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.arrow__img {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}

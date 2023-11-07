@@ -1,0 +1,117 @@
+
+.always-question {
+  position: relative;
+  padding: 150px 0 282px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+
+  @include breakpoint ($mobile-bp) {
+    padding: 70px 0 282px 0;
+  }
+
+}
+
+.always-question__tabs {
+  max-width: 846px;
+  margin: 67px 0 76px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.always-question__tab {
+  position: relative;
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(100% - 1px);
+    left: calc(0% - 11px);
+    width: calc(90% - 70px);
+    border-bottom: 1px solid $borderTab;
+
+    @include breakpoint ($tapik-bp) {
+      width: calc(100% - 70px);
+    }
+  }
+
+}
+
+.always-question__wrap {
+  width: 100%;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+
+}
+
+.always-question__holder {
+  width: 20%;
+}
+
+.always-question__button {
+  position: relative;
+  margin-left: 5px;
+  width: 37px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid $buttonTab;
+  border-radius: 50%;
+  background-color: transparent;
+
+  transform: rotate(-45deg);
+  cursor: pointer;
+  transition: .4s ease background, .4s ease transform;
+
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover,
+  &:active {
+    background-color: $buttonTab;
+    transform: rotate(0);
+  }
+
+  &:hover .always__question__cross,
+  &:active .always__question__cross,
+  &--active .always__question__cross {
+    stroke: white;
+  }
+
+  &--active {
+    background-color: $buttonTab;
+    transform: rotate(0);
+  }
+
+  @include breakpoint ($mobile-bp) {
+    width: 33px;
+    height: 33px;
+  }
+
+}
+
+.always-question__info {
+  width: 80%;
+  margin-bottom: 40px;
+  display: none;
+
+  &--block {
+    display: block;
+  }
+
+  @include breakpoint ($tapik-bp) {
+    width: 90%;
+  }
+}

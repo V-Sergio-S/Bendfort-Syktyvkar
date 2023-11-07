@@ -1,0 +1,72 @@
+
+.btn {
+  padding: 13px 26px;
+
+  border: 2px solid transparent;
+  border-radius: 17px;
+
+  background: $yellow;
+  color: $black;
+
+  font-family: MYRIAD, 'sans-serif';
+  font-weight: 600;
+  font-size: 17px;
+
+  cursor: pointer;
+  white-space: normal;
+  outline: none;
+  text-decoration: none;
+  transition: .4s ease background, .4s ease color, .4s ease border;
+
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover {
+    background: transparent;
+    border: 2px solid $yellow;
+
+    color: $yellow;
+
+  }
+
+  &--header {
+    display: inline-flex;
+
+    border-radius: 23px;
+
+    font-family: MYRIAD, 'sans-serif';
+    font-weight: 600;
+
+  }
+
+  &--main {
+    display: inline-flex;
+    padding: 13px 24px;
+
+    font-family: MYRIAD, 'sans-serif';
+    font-weight: 600;
+
+  }
+
+  &--form {
+    width: 260px;
+    height: 47px;
+
+    border-radius: 17px;
+    font-family: MYRIAD, 'sans-serif';
+    font-weight: 600;
+
+
+  }
+
+  &--modal {
+    max-width: 355px;
+    height: 56px;
+    padding: 17px 90px;
+
+    @include breakpoint ($mobile-bp) {
+      height: 52px;
+      padding: 13px 70px;
+    }
+  }
+
+}

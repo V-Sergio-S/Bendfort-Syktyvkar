@@ -1,0 +1,107 @@
+@import 'blocks/vendor/swiper-bundle';
+@import 'blocks/vendor/animate';
+@import 'blocks/vendor/normalize';
+@import 'blocks/vendor/mixin';
+@import 'blocks/vendor/var';
+
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  
+@font-face {
+    font-family: MYRIAD;
+    src: url("../fonts/MYRIADPRO-BOLD.woff2");
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: MYRIAD;
+    src: url("../fonts/MYRIADPRO-REGULAR.woff2");
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: MYRIAD;
+    src: url("../fonts/MYRIADPRO-SEMIBOLD.woff2");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Ubuntu;
+    src: url("../fonts/Ubuntu-Regular.woff2");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@keyframes slalom {
+    0%   {transform: translate(0, 0);}
+    25%  {transform: translate(10px, 20px);}
+    50%  {transform: translate(20px, 10px);}
+    75%  {transform: translate(10px, 20px);}
+    100% {transform: translate(0, 0);}
+}
+
+body {
+    box-sizing: border-box;
+    font-family: MYRIAD, -apple-system,'Montserrat Alternates',"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    background-color: $white;
+    font-weight: 400;
+    font-size: 17px;
+
+    &.no-scroll,
+    &.show-sidebar {
+        overflow: hidden;
+    }
+}
+
+
+@import 'blocks/main';
+@import 'blocks/container';
+@import 'blocks/header';
+@import 'blocks/yep-images';
+@import 'blocks/btn';
+@import 'blocks/form';
+@import 'blocks/menu';
+@import 'blocks/subnav';
+@import 'blocks/logo';
+@import 'blocks/phone';
+@import 'blocks/title';
+@import 'blocks/text';
+@import 'blocks/main-section';
+@import 'blocks/register-section';
+@import 'blocks/about';
+@import 'blocks/burger';
+@import 'blocks/benefits';
+@import 'blocks/wrap';
+@import 'blocks/card-section';
+@import 'blocks/teachers';
+@import 'blocks/management';
+@import 'blocks/comments';
+@import 'blocks/always-question';
+@import 'blocks/interrogation';
+@import 'blocks/sidebar';
+@import 'blocks/page';
+@import 'blocks/popup';
+@import 'blocks/privacy';
+@import 'blocks/modal';
+@import 'blocks/document';
+@import 'blocks/close';
+@import 'blocks/arrow';
+@import 'blocks/footer';
+
+
+
+

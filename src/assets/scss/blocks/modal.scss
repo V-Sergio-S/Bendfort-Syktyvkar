@@ -1,0 +1,261 @@
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity .2s ease-in, visibility .2s ease-in;
+  transform: translate(-50%, -50%);
+  background-color: rgba($white, .7);
+  overflow: auto;
+  z-index: 4;
+
+  &.is-active {
+    pointer-events: auto;
+    opacity: 1;
+    visibility: visible;
+  
+  }
+}
+
+.modal__window {
+  max-width: 1048px;
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+}
+
+.modal__box {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 45px 35px 45px 35px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+
+  border-radius: 20px;
+  background: $white;
+  z-index: 6;
+
+
+  @include breakpoint ($laptop-bp) {
+    padding: 40px 30px 90px 30px;
+  }
+
+  @include breakpoint ($tablet-bp) {
+    padding: 50px 45px 150px 45px;
+    flex-direction: column;
+    align-items: center;
+  }
+  @include breakpoint ($tapik-bp) {
+    justify-content: start;
+    padding: 60px 25px 150px 25px;
+  }
+
+  &--mobile {
+    padding: 45px 35px 85px 35px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &--doc {
+    padding: 25px 10px 90px 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+}
+
+.modal__image {
+  position: relative;
+  max-width: 100%;
+  width: 700px;
+  height: 514px;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+    background: linear-gradient(to bottom, #fff0 20%, #79797963 50%);
+
+  }
+  @include breakpoint ($tablet-bp) {
+    max-width: 100%;
+    width: 500px;
+  }
+
+  @include breakpoint ($mobile-bp) {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.modal__img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 15px;
+}
+
+.modal__info {
+  width: 90%;
+  height: 100%;
+  margin-left: 35px;
+  display: flex;
+  flex-direction: column;
+
+  &--document {
+    padding: 63px 20px;
+
+    @include breakpoint ($mobile-bp) {
+      padding: 10px 0;
+    }
+    
+  }
+
+  @include breakpoint ($tablet-bp) {
+    margin: 20px 0 0 15px;
+  }
+
+  @include breakpoint ($mobile-bp) {
+    margin: 20px 20px 0 20px;
+  }
+}
+
+.modal__schedule {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+
+}
+
+.modal__svg {
+  margin-right: 12px;
+  min-width: 31px;
+  min-height:31px;
+
+  @include breakpoint ($mobile-bp) {
+    margin-right: 8px;
+  }
+}
+
+.modal__action {
+  position: absolute;
+  bottom: 40px;
+  right: calc(25% - 133px);
+
+  z-index: 6;
+
+  &--privacy {
+    bottom: 20px;
+    right: calc(50% - 133px);
+  } 
+
+  @include breakpoint ($tablet-bp) {
+    bottom: 20px;
+    right: calc(48% - 113px);
+  }
+
+}
+
+.modal__pagination-svg {
+  width: 29px;
+  height: 54px;
+
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+
+  @include breakpoint ($mobile-bp) {
+    width: 17px;
+    height: 33px;
+  }
+}
+
+.modal__pagination-svg path {
+  transition: stroke .4s ease-in;
+}
+
+.modal__pagination-arrow-click {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background .2s ease-in;
+
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+
+  cursor: pointer;
+  z-index: 6;
+
+  &--left {
+    top: calc(50% - 27px);
+    left: 5px;
+
+    @include breakpoint ($mobile-bp) {
+      left: 0;
+    }
+  }
+
+  &--right {
+    top: calc(50% - 27px);
+    right: 5px;
+
+    @include breakpoint ($mobile-bp) {
+      right: 0;
+    }
+    
+  }
+
+  &:hover .modal__pagination-svg path {
+    stroke: $yellow;
+  }
+  &:active {
+    background-color: $yellow;
+  }
+
+  @include breakpoint ($mobile-bp) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.modal__navigation {
+  position: absolute;
+  top: calc(100% - 5px);
+  right: calc(50% - 5px);;
+  width: 10px;
+  height: 10px;
+
+  cursor: pointer;
+  z-index: 6;
+
+  &:hover .modal__navigation-button,
+  &:active .modal__navigation-button {
+      fill: #AAA;
+  }
+}

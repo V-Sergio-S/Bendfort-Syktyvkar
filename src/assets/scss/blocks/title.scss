@@ -1,0 +1,302 @@
+
+.title {
+  font-size: 50px;
+  line-height: 102.5%; /* 51.25px */
+
+  color: $white;
+
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+
+  @include breakpoint ( $tapik-bp) {
+    font-size: 20px;
+  }
+
+  &--main {
+    max-width: 488px;
+    font-weight: 700;
+
+    @include breakpoint ( $tapik-bp) {
+      font-size: 37px;
+    }
+  }
+
+  &--register {
+    margin-bottom: 20px;
+    max-width: 474px;
+
+    font-size: 42px;
+    font-weight: 700;
+
+    @include breakpoint ( $mobile-bp) {
+      font-size: 38px;
+    }
+
+    @include breakpoint ( $tapik-bp) {
+      font-size: 30px;
+    }
+  }
+
+  &--other {
+    margin-bottom:40px;
+    max-width: 518px;
+
+    font-weight: 700;
+
+    @include breakpoint ( $mobile-bp) {
+      max-width: 469px;
+    }
+  }
+
+  &--about {
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+
+    color: $black;
+
+    @include breakpoint ( $tapik-bp) {
+      font-size: 30px;
+    }
+  }
+
+  &--item {
+    text-align: center;
+    font-family: Ubuntu, 'sans-serif';
+    font-size: 42px;
+    line-height: 100%; /* 42px */
+
+    color: $black;
+
+    @include breakpoint ( $tapik-bp) {
+      font-size: 34px;
+    }
+  }
+
+  &--benefits {
+    margin-bottom: 37px;
+
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+
+    color: $black;
+
+    @include breakpoint ( $tapik-bp) {
+      font-size: 30px;
+    }
+  }
+
+  &--item-benefit {
+    max-width: 337px;
+
+    font-weight: 700;
+    font-size: 24px;
+
+    color: $black;
+
+    @include breakpoint ( $tapik-bp) {
+      font-size: 18px;
+    }
+  }
+
+  &--card-section {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 100%; /* 30px */
+
+    color: $black;
+
+    @include breakpoint ( $tapik-bp) {
+      font-size: 20px;
+    }
+  }
+
+  &--comments {
+    font-weight: 700;
+    font-size: 36px;
+
+    color: $black;
+
+    @include breakpoint ( $tapik-bp) {
+      font-size: 30px;
+    }
+  }
+
+  &--teachers {
+    position: absolute;
+    bottom: 5px;
+    left: 16px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+    z-index: 1;
+
+  }
+
+  &--management {
+    width: 100%;
+    height: 50px;
+
+    font-size: 17px;
+    font-weight: 700;
+    line-height: normal;
+
+    color: $black;
+  }
+
+  &--management-main {
+    margin: 0 0 45px 20px;
+
+    font-size: 36px;
+    font-weight: 700;
+
+    color: $black;
+
+    @include breakpoint ( $mobile-bp) {
+      font-size: 24px;
+    }
+  }
+
+  &--comment-name {
+    width: 107px;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 123.5%; /* 19.76px */
+
+    color: $black;
+
+    @include breakpoint ( $laptop-bp) {
+      font-size: 14px;
+    }
+  }
+
+  &--always-question {
+    width: 90%;
+
+    font-weight: 700;
+    font-size: 32px;
+
+    color: $black;
+
+    cursor: pointer;
+
+    transition: color .4s ease-in;
+
+    &:hover {
+      color: $yellow;
+    }
+
+    &--active {
+      color: $yellow;
+    }
+
+    @include breakpoint ( $mobile-bp) {
+      font-size: 24px;
+    }
+
+    @include breakpoint ( $tapik-bp) {
+      font-size: 15px;
+    }
+  }
+
+  &--always-question-title {
+    max-width: 668px;
+
+    font-weight: 700;
+    font-size: 32px;
+
+    color: $black;
+
+    @include breakpoint ( $tapik-bp) {
+      font-size: 26px;
+    }
+  }
+
+  &--interrogation {
+    font-size: 32px;
+    font-weight: 400;
+
+    color: $black;
+
+    @include breakpoint ( $tablet-bp) {
+      font-size: 26px;
+    }
+
+    @include breakpoint ( $tapik-bp) {
+      text-align: center;
+      font-size: 18px;
+    }
+  }
+
+  &--privacy {
+    font-size: 30px;
+    font-weight: 700;
+
+    color: $black;
+
+    @include breakpoint ( $mobile-bp) {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+  &--modal {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    font-size: 29px;
+    font-weight: 600;
+    line-height: 100%; /* 29px */
+
+    color: $white;
+    z-index: 1;
+
+    @include breakpoint ( $mobile-bp) {
+      font-size: 18px;
+    }
+  }
+
+  &--card {
+    max-width: 668px;
+
+    font-weight: 700;
+    font-size: 36px;
+
+    color: $black;
+
+    @include breakpoint ( $tapik-bp) {
+      font-size: 26px;
+    }
+  }
+
+  &--additional{
+    margin-top: 50px;
+
+    font-weight: 700;
+    font-size: 34px;
+    text-align: center;
+
+    color: $black;
+
+    @include breakpoint ( $tapik-bp) {
+      font-size: 26px;
+    }
+  }
+
+
+  &--document {
+    margin-bottom: 45px;
+
+    font-size: 36px;
+    font-weight: 700;
+
+    color: $black;
+
+    @include breakpoint ( $mobile-bp) {
+      font-size: 24px;
+    }
+  }
+
+}

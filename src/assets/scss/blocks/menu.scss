@@ -1,0 +1,140 @@
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  &--mobile {
+    flex-direction: column;
+  }
+
+  &--footer {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+
+      @include breakpoint ($tapik-bp) {
+        justify-content: center;
+    }
+  }
+
+}
+
+.menu__list {
+  position: relative;
+  list-style: none;
+
+  &:hover,
+  &:active {
+    .menu__svg path{
+      stroke: $yellow;
+    }
+    .menu__svg {
+      transform: rotate(180deg);
+    }
+    .menu__wrapp > .subnav{
+    display: flex;
+}
+  }
+
+  &--main {
+    height: 49px;
+    display: flex;
+    align-items: center;
+
+    &:not(:first-child) {
+      margin-left: 63px;
+  
+      @media screen and ( max-width: $mobile-bp) {
+          margin-left: 0;
+      }
+  
+    }
+    
+    @media screen and ( max-width: $tapik-bp) {
+      &:not(:last-child) {
+        margin-left: 0;
+      }
+  }
+
+  }
+
+  &--mobile {
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  &--footer {
+    width: 200px;
+    margin: 8px 0;
+  }
+
+  &.has-subnav{
+    position: relative;
+    padding-right: 30px;
+    
+    &::after{
+        content: "";
+        position: absolute;
+        top: 45%;
+        right: 20px;
+        display: block;
+        margin-top: 2px;
+
+        border-style: solid;
+        border-width:  6px 5px 0 5px;
+        border-color:  $yellow transparent transparent  transparent;
+
+        transform:translateY(-50%);
+    }
+
+    @include breakpoint ($laptop-bp) {
+        padding-right: 20px;
+    
+        font-size: 18px;
+    }
+    @include breakpoint ($tablet-bp) {
+        padding-right: 0;
+    
+        font-size: 16px;
+    }
+}
+
+}
+
+.menu__link {
+  text-decoration: none;
+
+  font-family: Myriad, 'sans-serif';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 108%; /* 17.28px */
+
+  color: $black;
+
+  transition: .4s ease color;
+
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover,
+  &:active {
+    color: $yellow;
+  }
+}
+
+.menu__svg {
+  margin-left: 6px;
+
+  transition: .4s ease transform;
+}
+.menu__svg path {
+  transition: .4s ease stroke;
+}
+
+.menu__action {
+  margin-top: 20px;
+  list-style: none;
+
+  &--mobile {
+    width: 100%;
+  }
+}
